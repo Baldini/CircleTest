@@ -14,13 +14,8 @@ jobs:
                 chmod +x ~/docker-compose
                 sudo mv ~/docker-compose /usr/local/bin/docker-compose
   test:
-    working_directory: /temp
-    docker:
-      - image: circleci/classic:edge
-    environment:
-      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
-      DOTNET_CLI_TELEMETRY_OPTOUT: 1
-      TEST_NAME: Core.Charge.Tests
+    machine:
+      image: circleci/classic:edge
     steps:
       - checkout
       - run:
