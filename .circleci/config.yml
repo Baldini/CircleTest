@@ -18,10 +18,7 @@ jobs:
       image: circleci/classic:edge
     steps:
       - checkout
-      - run:
-          name: Configure Enviroment
-          command: |
-                echo "$CIRCLE_TAG"
+      - run: echo $CIRCLE_TAG
 workflows:
   version: 2
   default-workflow:
