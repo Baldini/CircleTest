@@ -37,4 +37,5 @@ workflows:
           filters:
             branches:
                 only: master
-                tags: /^version-.*/
+            tags: 
+                only: /^version-.*/
