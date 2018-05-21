@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run:
           name: Configure Enviroment
-          command: echo $CIRCLE_TAG
+          command: echo "$CIRCLE_TAG"
 workflows:
   version: 2
   default-workflow:
