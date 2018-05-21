@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run:
           name: Configure Enviroment
-          command: echo "$TEST_NAME" > _tmp_key_cache_file
+          command: echo $CIRCLE_TAG
 workflows:
   version: 2
   default-workflow:
