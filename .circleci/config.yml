@@ -20,12 +20,12 @@ jobs:
     environment:
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
-      TEST_NAME: Core.Charge.Test
+      TEST_NAME: Core.Charge.Tests
     steps:
       - checkout
       - run:
           name: Configure Enviroment
-          command: echo "$TEST_NAME" > _tmp_key_cache_file
+          command: echo $CIRCLE_TAG
 workflows:
   version: 2
   default-workflow:
